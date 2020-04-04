@@ -1,7 +1,7 @@
 /*
  * server.h - Define shadowsocks server's buffers and callbacks
  *
- * Copyright (C) 2013 - 2018, Max Lv <max.c.lv@gmail.com>
+ * Copyright (C) 2013 - 2019, Max Lv <max.c.lv@gmail.com>
  *
  * This file is part of the shadowsocks-libev.
  *
@@ -56,10 +56,10 @@ struct manager_ctx {
     char *manager_address;
     char **hosts;
     int host_num;
-    char **nameservers;
-    int nameserver_num;
+    char *nameservers;
     int mtu;
     int ipv6first;
+    char *workdir;
 #ifdef HAVE_SETRLIMIT
     int nofile;
 #endif
